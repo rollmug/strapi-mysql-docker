@@ -39,7 +39,9 @@ To build your instance and run Strapi with MySQL:
 docker-compose up -d --build
 ```
 
-You can then access your Strapi instance from `http://localhost:1337/`
+You can then access your Strapi instance from `http://localhost:1337`
+
+Your GraphQL endpoint (and playground) will be available at: `http://localhost:1337/graphql`
 
 To stop all running containers, run:
 
