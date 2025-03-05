@@ -43,6 +43,14 @@ You can then access your Strapi instance from `http://localhost:1337`
 
 Your GraphQL endpoint (and playground) will be available at: `http://localhost:1337/graphql`
 
+### Permissions
+
+To set permissions, do this with all services running:
+
+```bash
+docker compose exec -u root strapi chown -R node:node /opt/app/public/uploads /opt/app/src/api
+```
+
 To stop all running containers, run:
 
 ```bash
