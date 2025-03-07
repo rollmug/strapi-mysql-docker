@@ -142,3 +142,6 @@ mysql/*
 
 init/*
 !init/.gitkeep
+
+src/app/*
+src/app/.gitkeep

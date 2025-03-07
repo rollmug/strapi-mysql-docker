@@ -46,11 +46,13 @@ Your GraphQL endpoint (and playground) will be available at: `http://localhost:1
 
 ### Permissions
 
-To set permissions, do this with all services running:
+You may or may not need to do this, but if you run into problems creating new Collections, you may need to adjust permissions. Just do this with all Docker services running:
 
 ```bash
 docker compose exec -u root strapi chown -R node:node /opt/app/public/uploads /opt/app/src/api
 ```
+
+### Stopping / Restarting
 
 To stop all running containers, run:
 
