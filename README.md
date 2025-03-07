@@ -16,6 +16,8 @@ Using the included `.env.example` file as a starter, create a `.env` file and up
 
 To automatically generate the app keys and secrets, you can optionally paste the following script into your terminal, then copy and past the resulting variables:
 
+(Requires OpenSSL installed: type `openssl version` first to make sure you have it.)
+
 ```bash
 APP_KEYS=$(openssl rand -base64 16),$(openssl rand -base64 16),$(openssl rand -base64 16),$(openssl rand -base64 16)  && \
 API_TOKEN_SALT=$(openssl rand -base64 16) && \
