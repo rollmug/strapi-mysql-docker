@@ -4,7 +4,9 @@ RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev l
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 ENV GENERATE_SOURCEMAP=false
-ENV NODE_OPTIONS=--max_old_space_size=${NODE_MAX_OLD_SPACE_SIZE}
+
+ARG NODE_OPTIONS
+ENV NODE_OPTIONS=$NODE_OPTIONS
 
 WORKDIR /opt/
 COPY package.json package-lock.json ./

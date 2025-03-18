@@ -40,6 +40,8 @@ services:
     container_name: strapi
     build:
       context: .
+      args:
+        NODE_OPTIONS: "--max-old-space-size=${NODE_MAX_OLD_SPACE_SIZE}"
     restart: always
     env_file: .env
     networks:
