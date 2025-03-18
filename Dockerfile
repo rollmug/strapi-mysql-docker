@@ -3,6 +3,8 @@ FROM node:18-alpine3.18
 RUN apk update && apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev nasm bash vips-dev git
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
+ENV GENERATE_SOURCEMAP=false
+ENV NODE_OPTIONS=--max_old_space_size=${NODE_MAX_OLD_SPACE_SIZE}
 
 WORKDIR /opt/
 COPY package.json package-lock.json ./
